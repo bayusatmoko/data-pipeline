@@ -24,7 +24,7 @@ RUN pip install --no-cache-dir \
 # Back to root for Spark install
 USER root
 ENV SPARK_VERSION=3.4.1
-RUN wget -q "https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop3.tgz" -O /tmp/spark.tgz \
+RUN wget -q "https://mirrors.huaweicloud.com/apache/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz" -O /tmp/spark.tgz \
     && tar -xzf /tmp/spark.tgz -C /opt \
     && mv /opt/spark-${SPARK_VERSION}-bin-hadoop3 /opt/spark \
     && rm /tmp/spark.tgz
